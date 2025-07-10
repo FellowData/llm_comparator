@@ -24,8 +24,8 @@ if st.button("🚀 Lancer la requête") and prompt and selected:
         st.markdown(f"### 🤖 {name}")
         with st.spinner("Réponse en cours..."):
             instruction = (
-                "À la fin de ta réponse, ajoute une section intitulée '=== SOURCES ===' "
-                "avec les sites web ou les sources dont tu t'es inspiré."
+                "À la fin de ta réponse, ajoute une section intitulée '=== SOURCES ==='"
+                "avec la liste des urls des sites web utilisées pour la réponse"
             )
 
             payload = {
