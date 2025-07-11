@@ -1,2 +1,5 @@
 streamlit
 requests
+openai
+pandas
+openpyxl
