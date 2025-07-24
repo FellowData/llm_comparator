@@ -7,3 +7,4 @@ anthropic
 google-genai
 mistralai
 supabase
+PyYAML
