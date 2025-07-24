@@ -1,0 +1,128 @@
+models:
+  - name: "Mistral: Mistral Small 3.2 24B 🟢"
+    id: "mistralai/mistral-small-3.2-24b-instruct:free"
+    provider: "openrouter"
+    provider_to_display: "openrouter"
+    available: true
+    free: true
+    web_search: false
+
+  - name: "Meta: Llama 3.3 70B Instruct 🔵"
+    id: "meta-llama/llama-3.3-70b-instruct:free"
+    provider: "openrouter"
+    provider_to_display: "openrouter"
+    available: true
+    free: true
+    web_search: false
+
+  - name: "Google: Gemma 3n 2B 🔸"
+    id: "google/gemma-3n-e2b-it:free"
+    provider: "openrouter"
+    provider_to_display: "openrouter"
+    available: false
+    free: true
+    web_search: false
+
+  - name: "DeepSeek: R1 0528 🔠"
+    id: "deepseek/deepseek-r1-0528:free"
+    provider: "openrouter"
+    provider_to_display: "openrouter"
+    available: true
+    free: true
+    web_search: false
+
+  - name: "OpenAI: gpt-4.1-mini (Data cutoff June 2024)" 
+    id: "gpt-4.1-mini-2025-04-14"
+    provider: "openai"
+    provider_to_display: "openai"
+    available: true
+    free: false
+    web_search: false
+
+  - name: "OpenAI: gpt-4o-mini Web Search 🧠 (2.5 cts / prompt)"
+    id: "gpt-4o-mini-search-preview-2025-03-11"
+    provider: "openai"
+    provider_to_display: "openai"
+    available: true
+    free: false
+    web_search: true
+
+  - name: "Anthropic: Claude 3.5 Sonnet 🎭 (Data cutoff April 2024, 4 cts / prompt)"
+    id: "claude-3-5-sonnet-20241022"
+    provider: "anthropic"
+    provider_to_display: "anthropic"
+    available: true
+    free: false
+    web_search: false
+  
+  - name: "Anthropic: Claude 3.5 Haiku ⚡ (Data cutoff July 2024, 3 cts / prompt)"
+    id: "claude-3-5-haiku-20241022"
+    provider: "anthropic"
+    provider_to_display: "anthropic"
+    available: true
+    free: false
+    web_search: false
+
+  - name: "Anthropic: Claude 3.5 Sonnet 🎭 (Web Search, 4 cts / prompt)"
+    id: "claude-3-5-sonnet-latest"
+    provider: "anthropic-web-search"
+    provider_to_display: "anthropic"
+    available: true
+    free: false
+    web_search: true
+  
+  - name: "Anthropic: Claude 3.5 Haiku ⚡ (Web Search, 3 cts / prompt)"
+    id: "claude-3-5-haiku-latest"
+    provider: "anthropic-web-search"
+    provider_to_display: "anthropic"
+    available: true
+    free: false
+    web_search: true
+
+  - name: "Perplexity : Sonar 🌐"
+    id: "sonar"
+    provider: "perplexity"
+    provider_to_display: "perplexity"
+    available: true
+    free: false
+    web_search: true
+
+  - name: "Google : Gemini 2.5 Flash"
+    id: "gemini-2.5-flash"
+    provider: "gemini"
+    provider_to_display: "gemini"
+    available: true
+    free: true
+    web_search: true
+
+  - name: "Mistral Medium"
+    id: "mistral-medium-latest"
+    provider: "mistral"
+    provider_to_display: "mistral"
+    available: true
+    free: true
+    web_search: false
+
+  - name: "Mistral Medium (web search)"
+    id: "mistral-medium-latest"
+    provider: "mistral-web-search"
+    provider_to_display: "mistral"
+    available: true
+    free: true
+    web_search: true
+    
+  - name: "DeepSeek: DeepSeek Chat 🔠"
+    id: "deepseek-chat"
+    provider: "deepseek"
+    provider_to_display: "deepseek"
+    available: true
+    free: false
+    web_search: false
+  
+  - name: "DeepSeek: DeepSeek Reasoner 🤖"
+    id: "deepseek-reasoner"
+    provider: "deepseek"
+    provider_to_display: "deepseek"
+    available: true
+    free: false
+    web_search: false

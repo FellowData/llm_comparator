@@ -3,3 +3,7 @@ requests
 openai
 pandas
 openpyxl
+anthropic
+google-genai
+mistralai
+supabase

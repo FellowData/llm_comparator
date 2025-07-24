@@ -1,4 +1,4 @@
-# 🤖 LLM Comparator App (OpenRouter + OpenAI)
+# 🤖 LLM Comparator App
 
 This Streamlit app allows you to **compare responses from multiple LLMs** (Large Language Models) including Mistral, LLaMA, Gemma, DeepSeek, and OpenAI’s GPT-4o, all from a single interface.
 
@@ -6,15 +6,18 @@ This Streamlit app allows you to **compare responses from multiple LLMs** (Large
 
 ## 🚀 Features
 
-- 🧠 Multi-model support: OpenRouter API + OpenAI API
+- 🧠 Multi-model API support: OpenRouter, Claude, Perplexity, Gemini, Mistral, Deepseek, ChatGPT
 - 💬 Prompt input with source-tracking instruction
 - 📊 Compare responses across models
 - 🛡️ Graceful error handling (e.g. 503 fallback)
 - 📜 Prompt history stored as JSON
-- 🔍 Filter history by model and prompt content
+- 🔍 Filters for prompts tab and prompts history
 - 📤 Export prompt history as Excel file
 - 🔐 Secure API key usage via Streamlit Secrets
-
+- Architecture modulaire : Séparation claire des responsabilités
+- Pattern Adapter : Extensibilité pour nouveaux providers
+- Fallback robuste : Double persistance (cloud + local)
+- Configuration externalisée : YAML pour les modèles
 ---
 
 ## 🛠 Installation
@@ -27,9 +30,9 @@ streamlit run app.py
 ```
 
 ### 📦 Requirements
-
-- `pandas` for prompt history handling
-- `openpyxl` to support Excel export
+- See requirements.txt
+    - `pandas` for prompt history handling
+    - `openpyxl` to support Excel export
 - Account with API on [openrouter.ai](https://openrouter.ai) to use free/paid LLMs:
     1. Sign up on https://openrouter.ai
     2. Go to profile > API Key
@@ -49,15 +52,19 @@ Create a `.streamlit/secrets.toml` file:
 ```toml
 OPENROUTER_API_KEY = "pk-..."
 OPENAI_API_KEY = "sk-..."
+...
 ```
 
 Or, use Streamlit Cloud's **Secrets Manager** if deployed online.
+
+
+Create a Database on https://supabase.com
 
 ---
 
 ## 📜 Prompt History
 
-Prompts are stored locally in `prompt_history.json` with:
+Prompts are stored on a distant database (supabase) and locally in `prompt_history.json` with:
 
 - Timestamp
 - Prompt content
@@ -68,6 +75,7 @@ The app includes:
 - A history viewer tab
 - Filter by model
 - Search prompt text
+- Search answer text
 - Excel download (`prompt_history.xlsx`)
 
 ---
