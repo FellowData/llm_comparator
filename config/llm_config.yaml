@@ -79,7 +79,7 @@ models:
     free: false
     web_search: true
 
-  - name: "Perplexity : Sonar 🌐"
+  - name: "Perplexity : Sonar 🌐 (Web Search, 0.5 cts / prompt)"
     id: "sonar"
     provider: "perplexity"
     provider_to_display: "perplexity"

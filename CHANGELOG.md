@@ -51,3 +51,45 @@
 - Synchronizes Database to JSON when loading prompt history user interface
 - Filters available models based on pricing, web search capability, provider
 - Enrich llm_config.yaml configuration
+
+
+## [0.6.0] - 2025-07-25 & 28
+### Added
+- requirements updated
+- Database (table Supabase prompt_history) updated with :
+  - evaluation_score : Score global /10
+  - readability_score : Score de lisibilité /10
+  - structure_score : Score de structure /10
+  - sources_score : Score des sources /10
+  - completeness_score : Score de complétude /10
+  - relevance_score : Score de pertinence /10
+
+- Automatic evaluation of the answer provided by LLM :
+  1. Évaluation Multi-Critères
+    📖 Lisibilité : Score Flesch-Kincaid, longueur des phrases/mots
+    🏗️ Structure : Organisation, paragraphes, listes, titres
+    🔗 Sources : Qualité, diversité, fiabilité des URLs
+    📋 Complétude : Couverture des éléments du prompt
+    🎯 Pertinence : Adéquation réponse/question
+
+  2. Interface Visuelle
+
+    Scores individuels avec barres colorées
+    Graphique radar pour comparaison multi-modèles
+    Recommandations personnalisées d'amélioration
+    Ranking automatique du meilleur modèle
+
+  3. Analytics Avancés
+
+    Dashboard avec métriques globales
+    Tendances temporelles des performances
+    Comparaison entre modèles avec statistiques
+    Export enrichi avec scores d'évaluation
+
+### Refactoring
+- Separate files for each tab
+- Specific files for components
+- Services (3) : ModelConfig + History + Evaluation
+- Modular UI : Tabs + separate Components
+- Caching : Optimized performance
+- Duplicated code : 0 line VS 270 before

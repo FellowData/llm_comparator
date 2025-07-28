@@ -8,3 +8,6 @@ google-genai
 mistralai
 supabase
 PyYAML
+textstat
+numpy
+plotly
